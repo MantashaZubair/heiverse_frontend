@@ -1,0 +1,30 @@
+/* .container{
+    margin-top: 40px;
+    padding: 10px 70px;
+} */
+ .button-container{
+
+  display: flex;
+  justify-content: end;
+  margin-right: 50px;
+  margin-top: 50px;
+
+}
+ .button-container button{
+padding: 10px 30px;
+color: white;
+background-color: #117bed;
+border:2px solid #117bed;
+font-size: 20px;
+border-radius: 12px;
+}
+.users-container{
+    margin-top: 70px;
+    
+}
+.home{
+  display: flex;
+}
+
+  
+
