@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Modal from "react-bootstrap/Modal";
 import { useDispatch } from 'react-redux';
 import {  userupdate } from '../action/userAction';
-
+import {useNavigate} from "react-router-dom";
 const EditUser = ({modelopened, setModelOpened, id,user}) => {
   console.log(user?._id)
   console.log(user?.first_name)
@@ -12,11 +12,12 @@ const EditUser = ({modelopened, setModelOpened, id,user}) => {
     const [email, setEmail] = useState(user?.email);
     const [gender, setGender] = useState(user?.gender);
     const [domain, setDomain] = useState(user?.domain);
-    
+    const navigate = useNavigate()
     const dispatch = useDispatch()
     const handleSubmit = (e)=>{   
     e.preventDefault()
     dispatch(userupdate(id,first_name,last_name,email,gender,domain));
+    navigate("/")
     setModelOpened(false); 
     }
   
