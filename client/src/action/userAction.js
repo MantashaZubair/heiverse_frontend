@@ -14,8 +14,7 @@ export const create = (first_name,last_name, email, gender,domain) => async (dis
     try {
       dispatch({ type: USER_CREATE_REQUEST });
       const config = { headers: { "Contnet-Type": "application/json" } };
-      const { data } = await axios.post(
-        "https://heliverse-back.onrender.com/api/users",
+      const { data } = await axios.post(`https://heliverse-back.onrender.com/api/users`,
         { first_name,last_name, email, gender,domain },
         config
       );
