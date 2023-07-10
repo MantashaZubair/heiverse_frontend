@@ -7,13 +7,23 @@ const EditUser = ({modelopened, setModelOpened, id,user}) => {
   console.log(user?._id)
   console.log(user?.first_name)
   // console.log(users?.user?.first_name)
-    const [first_name, setFirstName] = useState(user?.first_name);
-    const [last_name, setLastName] = useState(user?.last_name);
-    const [email, setEmail] = useState(user?.email);
-    const [gender, setGender] = useState(user?.gender);
-    const [domain, setDomain] = useState(user?.domain);
+    const [first_name, setFirstName] = useState("");
+    const [last_name, setLastName] = useState("");
+    const [email, setEmail] = useState("");
+    const [gender, setGender] = useState("");
+    const [domain, setDomain] = useState("");
     const navigate = useNavigate()
     const dispatch = useDispatch()
+
+   useEffect(()=>{
+    const {first_name,last_name,email,gender,domain} = user
+    setFirstName(first_name)
+    setLastName(last_name)
+    setEmail(email)
+    setGender(gender)
+     setDomain(domain)
+   },[user])
+  
     const handleSubmit = (e)=>{   
     e.preventDefault()
     dispatch(userupdate(id,first_name,last_name,email,gender,domain));
