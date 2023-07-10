@@ -15,14 +15,7 @@ const EditUser = ({modelopened, setModelOpened, id,user}) => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
 
-   useEffect(()=>{
-    const {first_name,last_name,email,gender,domain} = user
-    setFirstName(first_name)
-    setLastName(last_name)
-    setEmail(email)
-    setGender(gender)
-     setDomain(domain)
-   },[user])
+ 
   
     const handleSubmit = (e)=>{   
     e.preventDefault()
