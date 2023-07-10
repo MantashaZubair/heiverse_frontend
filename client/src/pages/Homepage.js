@@ -52,7 +52,7 @@ const{loading,error,users}= userList
       console.log(search)
     }
    }else{
-    dispatch(listUser(page))
+    window.location.reload()
    }
  
 
