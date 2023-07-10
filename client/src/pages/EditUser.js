@@ -21,11 +21,11 @@ const EditUser = ({modelopened, setModelOpened, id,user}) => {
     e.preventDefault()
     dispatch(userupdate(id,first_name,last_name,email,gender,domain));
     navigate("/")
-      setFirstName(user?.first_name)
-      setLastName(user?.last_name)
-      setEmail(user?.email)
-      setGender(user?.gender)
-      setDomain(user?.domain)
+      setFirstName("")
+      setLastName("")
+      setEmail("")
+      setGender("")
+      setDomain("")
       
     setModelOpened(false); 
    
