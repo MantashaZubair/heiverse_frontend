@@ -46,7 +46,7 @@ const{loading,error,users}= userList
  
    let key =(e.target.value)
    if(key){
-    let result =await axios.get(`http://localhost:8080/api/users/search/${key}`)
+    let result =await axios.get(`https://heliverse-back.onrender.com/api/users/search/${key}`)
     if(result){
       setSearch(result)
       console.log(search)
