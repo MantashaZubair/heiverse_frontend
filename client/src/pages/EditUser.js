@@ -26,7 +26,6 @@ const EditUser = ({modelopened, setModelOpened, id,user}) => {
       setGender("")
       setDomain("")
     navigate("/")
-   window.location.reload()
     setModelOpened(false); 
    
     }
