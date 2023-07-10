@@ -14,7 +14,7 @@ const EditUser = ({modelopened, setModelOpened, id,user}) => {
     const [domain, setDomain] = useState(user?.domain);
     
     const dispatch = useDispatch()
-    const handleClick = (e)=>{   
+    const handleSubmit = (e)=>{   
     e.preventDefault()
     dispatch(userupdate(id,first_name,last_name,email,gender,domain));
     setModelOpened(false); 
@@ -38,7 +38,7 @@ const EditUser = ({modelopened, setModelOpened, id,user}) => {
       </Modal.Header>
       <Modal.Body>
        
-        
+        <form onSubmit={handleSubmit}> 
         <div className="mb-3">
       <input
         type="text"
@@ -90,10 +90,10 @@ const EditUser = ({modelopened, setModelOpened, id,user}) => {
         </select>
       </label>
       </div> 
-      <button type="submit" onClick={handleClick} className="btn btn-primary bg-success">
+      <button type="submit"  className="btn btn-primary bg-success">
              update
             </button>
-        
+          </form>
       </Modal.Body>
     </Modal>
   </div>
