@@ -7,11 +7,11 @@ const EditUser = ({modelopened, setModelOpened, id,user}) => {
   console.log(user?._id)
   console.log(user?.first_name)
   // console.log(users?.user?.first_name)
-    const [first_name, setFirstName] = useState("");
-    const [last_name, setLastName] = useState("");
-    const [email, setEmail] = useState("");
-    const [gender, setGender] = useState("");
-    const [domain, setDomain] = useState("");
+    const [first_name, setFirstName] = useState(user?.first_name);
+    const [last_name, setLastName] = useState(user?.last_name);
+    const [email, setEmail] = useState(user?.email);
+    const [gender, setGender] = useState(user?.gender);
+    const [domain, setDomain] = useState(user?.domain);
     const navigate = useNavigate()
     const dispatch = useDispatch()
 
@@ -21,6 +21,12 @@ const EditUser = ({modelopened, setModelOpened, id,user}) => {
     e.preventDefault()
     dispatch(userupdate(id,first_name,last_name,email,gender,domain));
     navigate("/")
+      setFirstName(user?.first_name)
+      setLastName(user?.last_name)
+      setEmail(user?.email)
+      setGender(user?.gender)
+      setDomain(user?.domain)
+      
     setModelOpened(false); 
    
     }
