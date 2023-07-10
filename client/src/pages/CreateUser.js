@@ -19,7 +19,6 @@ const CreateUser = ({ modelopened, setModelOpened }) => {
         setDomain("")
         setGender("") 
         setModelOpened(false);
-        window.location.reload()
        }
        
   return (
@@ -46,6 +45,7 @@ const CreateUser = ({ modelopened, setModelOpened }) => {
           value={first_name}
           className="form-control"
           onChange={(e) => setFirstName(e.target.value)}
+          required
         />
         </div>
 
@@ -56,6 +56,7 @@ const CreateUser = ({ modelopened, setModelOpened }) => {
           value={last_name}
           className="form-control"
           onChange={(e) => setLastName(e.target.value)}
+          required
         />
         </div>
         <div className="mb-3">
@@ -65,12 +66,13 @@ const CreateUser = ({ modelopened, setModelOpened }) => {
           value={email}
           className="form-control"
           onChange={(e) => setEmail(e.target.value)}
+          required
         />
         </div>
         <div className="mb-3">
         <label>
           Gender:
-          <select value={gender} onChange={(e) => setGender(e.target.value)}>
+          <select value={gender} onChange={(e) => setGender(e.target.value) } required>
             <option value="">Select</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
@@ -79,7 +81,7 @@ const CreateUser = ({ modelopened, setModelOpened }) => {
         </label>
         <label>
           Domain:
-          <select value={domain} onChange={(e) => setDomain(e.target.value)}>
+          <select value={domain} onChange={(e) => setDomain(e.target.value)} required>
             <option value="">Select</option>
             <option value="Finance">Finance</option>
             <option value="Marketing">Marketing</option>
