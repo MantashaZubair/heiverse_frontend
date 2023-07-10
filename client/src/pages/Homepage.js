@@ -3,6 +3,7 @@ import "./Homepage.css"
 import Card from '../component/Card'
 import { useDispatch, useSelector } from 'react-redux'
 import { listUser } from '../action/userAction'
+import { ToastContainer } from 'react-toastify';
 import CreateUser from './CreateUser'
 import axios from 'axios'
 
@@ -62,6 +63,7 @@ const{loading,error,users}= userList
 
   return (
     <div className='container-fluid'>
+    <ToastContainer/>
     {/* create user */}
        <div className='button-container'>
 
