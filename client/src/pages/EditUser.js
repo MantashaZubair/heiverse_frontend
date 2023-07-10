@@ -21,7 +21,6 @@ const EditUser = ({modelopened, setModelOpened, id,user}) => {
     e.preventDefault()
     dispatch(userupdate(id,first_name,last_name,email,gender,domain));
     navigate("/")
-      window.location.reload()
     setModelOpened(false); 
    
     }
