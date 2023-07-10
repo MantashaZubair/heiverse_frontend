@@ -3,6 +3,7 @@ import Modal from "react-bootstrap/Modal";
 import { useDispatch } from 'react-redux';
 import {  userupdate } from '../action/userAction';
 import {useNavigate} from "react-router-dom";
+import { toast } from 'react-toastify';
 const EditUser = ({modelopened, setModelOpened, id,user}) => {
   console.log(user?._id)
   console.log(user?.first_name)
@@ -18,7 +19,9 @@ const EditUser = ({modelopened, setModelOpened, id,user}) => {
     e.preventDefault()
     dispatch(userupdate(id,first_name,last_name,email,gender,domain));
     navigate("/")
+      toast("created user successfully")
     setModelOpened(false); 
+   
     }
   
     
