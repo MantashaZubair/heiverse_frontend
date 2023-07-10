@@ -52,7 +52,6 @@ export const create = (first_name,last_name, email, gender,domain) => async (dis
         dispatch({ type: USER_UPDATE_REQUEST});
       const { data } = await axios.put(`https://heliverse-back.onrender.com/api/users/${id}`,{id,first_name,last_name, email, gender,domain });
       dispatch({ type: USER_UPDATE_SUCCESS, payload: data });
-      window.location.reload(false)
     } catch (error) {
       dispatch({ type: USER_UPDATE_FAIL, payload: error.message });
     }
