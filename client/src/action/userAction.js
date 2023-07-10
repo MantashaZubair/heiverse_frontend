@@ -40,6 +40,7 @@ export const create = (first_name,last_name, email, gender,domain) => async (dis
         dispatch({ type: USER_DETAILS_REQUEST});
         const { data } = await axios.get(`https://heliverse-back.onrender.com/api/users/${id}`);
         dispatch({ type: USER_DETAILS_SUCCESS, payload: data });
+        window.location.reload()
       } catch (error) {
         dispatch({ type: USER_DETAILS_FAIL, payload: error.message });
     }
