@@ -20,13 +20,13 @@ const EditUser = ({modelopened, setModelOpened, id,user}) => {
     const handleSubmit = (e)=>{   
     e.preventDefault()
     dispatch(userupdate(id,first_name,last_name,email,gender,domain));
-    navigate("/")
-      setFirstName("")
+       setFirstName("")
       setLastName("")
       setEmail("")
       setGender("")
       setDomain("")
-      
+    navigate("/")
+   window.location.reload()
     setModelOpened(false); 
    
     }
