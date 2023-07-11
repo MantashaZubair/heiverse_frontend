@@ -65,7 +65,7 @@ const{loading,error,users}= userList
     <div className='container-fluid'>
     <ToastContainer/>
     {/* create user */}
-       <div className='button-container'>
+      <div className='button-container  d-flex col-12 col-md-11 col-lg-9 mx-auto'>
 
        <button  className=" m-3" onClick={() => setModelOpened(true)} >
               create User
@@ -76,7 +76,7 @@ const{loading,error,users}= userList
             />
        </div>
     <div className="container">
-  <div className="d-flex w-25 mx-auto">
+  <div className="d-flex col-12 col-md-6 col-lg-5 mx-auto">
     <input className="form-control me-2"  type="search" placeholder="Search"  onChange={searchHandler} />
   </div>
 </div>
