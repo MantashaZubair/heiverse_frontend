@@ -11,8 +11,8 @@ const Card = ({item}) => {
               <p className="card-text">Gender:{item?.gender}</p> 
               <p className="card-text">Domain:{item?.domain}</p>        
               <p className="card-text fw-bold">Avalable:{item.available===true ? <><span className='text-success'>yes available</span></> : <><span className='text-warning'>  not available</span></>}</p>
-              <button className="btn btn-primary ms-2 " onClick={()=>navigate(`/userDetails/${item._id}`)}>More Details</button>
-              <button className="btn btn-success ms-3">
+              <button className="btn btn-primary ms-md-2 ms-0" onClick={()=>navigate(`/userDetails/${item._id}`)}>More Details</button>
+              <button className="btn btn-success ms-md-3 ms-1 mt-sm-0 mt-1 ">
               Add team
               </button>
             </div>
